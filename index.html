@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 | Portfolio Using HTML & CSS</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <!-- Navbar Starts -->
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="./Utilities/logo.svg" alt="logo">
+        </div>
+        <ul id="navlinks">
+            <li class="navs nav1">Home</li>
+            <li class="navs nav2">Works <img src="./Utilities/darrow.svg" alt="works"> </li>
+            <li class="navs nav3">About</li>
+            <li class="navs nav4">Projects</li>
+            <li class="navs nav5">Services</li>
+        </ul>
+        <div id="chat">
+            <button type="button">Let's chat</button>
+        </div>
+        <div id="smscreenmenu">
+            <span id="smmenu" title="menu"><img src="./Utilities/smmenu.svg" alt="menu"></span>
+        </div>
+
+        <!-- Small screen menu -->
+
+        <div id="menusmscreens">
+            <ul id="smnavlinks">
+                <li class="navs nav1">Home</li>
+                <li class="navs nav2">Works <img src="./Utilities/darrow.svg" alt="works"> </li>
+                <li class="navs nav3">About</li>
+                <li class="navs nav4">Projects</li>
+                <li class="navs nav5">Services</li>
+            </ul>
+            <div id="smchat">
+                <button type="button">Let's chat</button>
+            </div>
+        </div>
+
+        <!-- Small screen menu -->
+
+    </nav>
+
+    <!-- Navbar Ends -->
+
+
+    <!-- Main Page Starts -->
+
+    <main id="main">
+
+        <!-- Section 1 Starts -->
+
+        <section id="side1">
+            <div class="headings">
+                <h1 class="heading">Hi! I Am Stephen</h1>
+                <span class="badge">Web</span>
+                <p class="subtext">In Industry Over 7 Years and in many projects.</p>
+            </div>
+            <div class="cta">
+                <button type="button" id="cta1">Hire Me</button>
+                <button type="button" id="cta2">Projects <img src="./Utilities/carrow.svg" alt="carrow"> </button>
+            </div>
+            <div class="clientsonwork">
+                <span>+100</span>
+                <p>Clients on work worldwide.</p>
+            </div>
+            <div class="conpro">
+                <div class="projects conpro1">
+                    <span>572</span>
+                    <p>Projects Done</p>  
+                </div>
+                <div class="contactme conpro1">
+                    <span>Contact</span>
+                    <a href="mailto:stephendev@mail.com">stephendev@mail.com</a>  
+                </div>
+            </div>
+            <div class="projectlists">
+                <div class="part1">
+                    <span>Project Statistics 2022</span>
+                    <button type="button">Know More</button>
+                </div>
+                <div class="part2">
+                    <div class="project">
+                        <span>Website Design</span>
+                        <span>75</span>
+                    </div>
+                    <div class="project">
+                        <span>Mobile App Design</span>
+                        <span>64</span>
+                    </div>
+                    <div class="project">
+                        <span>Brand Identity</span>
+                        <span>37</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1 Ends -->
+
+        <section id="side2">
+            <div class="imagemine">
+                <img src="./Utilities/portrait.svg" alt="stephen">
+            </div>
+            <div class="newsletter">
+                <input type="text" name="newsletter" title="newsletter" placeholder="Subscribe to our news letter">
+                <button type="button"> <img src="./Utilities/sarrow.svg" alt="side arrow"> </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Main Page Ends -->
+
+    <!-- Script Starts -->
+
+    <script>
+
+        let menu = document.querySelector('#smscreenmenu');
+        let menuslide = document.querySelector('#menusmscreens');
+        let menuclose = document.querySelector('#smscreenmenu #smmenu img');
+
+        menu.addEventListener('click', function() {
+            menuslide.classList.toggle('slidedown');
+            if (menuslide.classList.contains('slidedown')) {
+                menuclose.src = './Utilities/smclose.svg';
+                menuclose.title = 'close';
+            }
+            else {
+                menuclose.src = './Utilities/smmenu.svg';
+                menuclose.title = 'menu';
+            }
+        })
+
+    </script>
+
+    <!-- Script Ends -->
+
+</body>
+</html>
